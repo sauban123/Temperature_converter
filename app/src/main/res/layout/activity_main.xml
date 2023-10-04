@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:id="@+id/temp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:textColor="#8AC8FF"
+            android:textStyle="bold"
+            android:letterSpacing="0.03"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="26dp"
+            android:id="@+id/value"
+            android:textColor="#E7EDFF"
+            android:textColorHint="#5A9AC5"
+            android:text="0"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:id="@+id/scales"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginVertical="5dp"
+            android:textStyle="bold"
+            android:id="@+id/celcius"
+            android:paddingLeft="3dp"
+            android:textColor="#BCBCBC"
+            android:text="Celcius"/>
+        <RadioButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginVertical="5dp"
+            android:id="@+id/kelvin"
+            android:textStyle="bold"
+            android:textColor="#E1E1E1"
+            android:paddingLeft="3dp"
+            android:text="Kelvin"/>
+
+        <RadioButton
+            android:id="@+id/Fahrenheit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:paddingLeft="3dp"
+            android:text="Fahrenheit"
+            android:textStyle="bold"
+            android:textColor="#E8E8E8"            android:textSize="20dp"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scales"
+        android:id="@+id/btnContainer"
+        android:backgroundTint="@color/black"
+        android:layout_marginVertical="15dp"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONVERT"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="50dp"
+            android:textColor="#E9EEFF"
+            android:letterSpacing="0.05"
+            android:background="@color/white"
+            android:textSize="25dp"
+            android:id="@+id/convert"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/resultContainer"
+        android:layout_below="@+id/btnContainer"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- - -"
+            android:textSize="20dp"
+            android:textColor="#38FF00"
+            android:paddingVertical="10dp"
+            android:id="@+id/result1"
+            android:layout_marginVertical="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- - -"
+            android:textSize="20dp"
+            android:textColor="#38FF00"
+            android:id="@+id/result2"
+            android:paddingVertical="10dp"
+            android:layout_marginVertical="5dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:textStyle="bold"
+        android:textAlignment="textEnd"
+        android:layout_marginBottom="0dp"
+        android:textColor="#A39595"
+        android:text="developed by\n@sauban" />
+</RelativeLayout>
